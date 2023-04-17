@@ -9,6 +9,7 @@ class TitlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //color: Colors.red,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal:20,vertical: 20 ),
         child: Row(
@@ -17,11 +18,11 @@ class TitlePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [                  
                 Text(
-                  'Goku Super Saiyayin God',
+                  'Personajes Dragon Ball Z',
                    style:TextStyle( fontWeight: FontWeight.bold,fontSize: 22 )
                    ),  
                 Text(
-                  'Blue and Red States', 
+                  'DBZ-DBSUPER', 
                   style:TextStyle(color: Colors.black45)
                   ),
               ],
@@ -29,7 +30,7 @@ class TitlePage extends StatelessWidget {
             Expanded(child: Container()),             
              const Icon(Icons.star,color: Colors.red),
             const Text(
-              '41',
+              '100',
               style:TextStyle( fontSize: 25,  )
             ),
           ],
@@ -47,17 +48,18 @@ class ButtonIconSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 10) ,
       //color: Colors.yellow,
-      height: 100,
+      //height: 100,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 0),
         child: Row(
           children: [
-            const CustomColumButonIcon(icon:Icons.local_fire_department,text: 'SSY(3-G-UI)'),
+            const CustomColumButonIcon(icon:Icons.local_fire_department,text: 'Fases'),
             Expanded(child: Container()),
-            const CustomColumButonIcon(icon:Icons.language_outlined,text: 'PLANETA VEGGITO'),
+            const CustomColumButonIcon(icon:Icons.language_outlined,text: 'Planeta Origen'),
             Expanded(child: Container()),
-            const  CustomColumButonIcon(icon:Icons.token,text: 'HEROE'),
+            const  CustomColumButonIcon(icon:Icons.token,text: 'Rol'),
           ],
         ),
       ),
@@ -77,7 +79,7 @@ final String text;
   Widget build(BuildContext context) {
 
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [                               
         Icon(icon, color: Colors.blue,size: 35,),
         //Text('EVOLUCIONES:',style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold)),
@@ -95,18 +97,19 @@ class FastLoremIpsumContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:10),
+      padding: const EdgeInsets.symmetric(horizontal:15),
       child: Container(
-        height: 100,
+        //height: 100,
         //color: Colors.green,
-        child: Text('Est quis consectetur anim culpa minim fugiat. 
-        Ea veniam laborum cillum sunt duis magna quis et laborum. 
-        Dolor magna amet nulla laborum. Deserunt elit consectetur 
-        est id veniam adipisicing qui ullamco ea anim culpa in nostrud est.
-         Quis ad ipsum magna aliquip incididunt officia exercitation. 
-         Velit et proident in nulla magna aliquip enim elit quis sit aute. 
-         Cupidatat sint sint sunt dolor magna consequat aliqua amet Lorem
-          irure et voluptate elit sunt.'),
+        child: Column( 
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+          Text('DESCRIPCION',style: TextStyle(fontWeight: FontWeight.bold)),
+          SizedBox(height:8),
+          Text('Dragon Ball Z acontece tras los sucesos de la saga de Piccolo del manga escrito y dibujado, como no podía ser de otra forma, por Akira Toriyama. Se trata de la secuela más larga de la saga Dragon Ball. La trama de Dragon Ball Z se centra en la vida adulta de Son Goku, quien tendrá que defender la tierra de los numerosos villanos que amenazan con destruirla. Además, la serie trama de forma paralela la madurez de su hijo Gohan. La producción destaca por tener un tono más serio que su predecesora.Se divide en cinco sagas diferentes (Saiyajin, Freezer, Garlic Jr., Cell y Majin Buu) en un total de 291 episodios.',
+            textAlign: TextAlign.justify),
+          ]
+      )
       ),
     );
   }

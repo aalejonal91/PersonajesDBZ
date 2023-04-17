@@ -9,15 +9,12 @@ class BasicDesignScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: Column(       
-        children: [ 
-            Image(
-            image: AssetImage('assets/goku_portada.png')
-          ),
+        children:const [ 
+          Image(image: AssetImage('assets/guerreros_z.jpg')),
           TitlePage(),
-          SizedBox(height: 20,),
+          SizedBox(height: 5,),
           ButtonIconSection(),
-          FastLoremIpsumContainer(),
-          
+          FastLoremIpsumContainer(),         
       ] 
     ),
    );
