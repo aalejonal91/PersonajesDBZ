@@ -1,0 +1,1 @@
+export 'package:designs_initials_flutter/screens/basics_designs.dart';
