@@ -92,18 +92,7 @@ class FastLoremIpsumContainer extends StatelessWidget {
     );
   }
 }
-class Background extends StatelessWidget {
-  const Background({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.topCenter,
-      color: Color(0xff51c3dc) , 
-      height: double.infinity ,
-      child: const Image(image: AssetImage('assets/scroll_1.png'),       
-           
-      ),
-    );
-  }
-}
+
+
+

@@ -41,7 +41,7 @@ class PageHome extends StatelessWidget {
       //mainAxisAlignment: MainAxisAlignment.center,
       children:const [  
         //Background Image        
-         Background(),
+         BackgroundScroll(),
         //MainContent
         MainContent(),       
       ]
@@ -55,7 +55,7 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff51c3dc),
+      color:const Color(0xff51c3dc),
       child:  Center( 
         child: TextButton(
           onPressed: (){}, 
