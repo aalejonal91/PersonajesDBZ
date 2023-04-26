@@ -1,3 +1,4 @@
+import 'package:designs_initials_flutter/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:designs_initials_flutter/screens/screens.dart';
 
@@ -11,11 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute:'home_screen' ,
+      initialRoute:'pruebas' ,
       routes: {
+        'pruebas'      : (_)=> SplashPage(),
+        'welcome_Page' : (_)=> GokuWelcomePage(),
         'basics_design': (_)=> BasicDesignScreen(),
         'scroll_screen': (_)=> ScrollScreen(),
-        'home_screen': (_)=> HomeScreen(),
+        'home_screen'  : (_)=> HomeScreen()
       },
     );
   } 
