@@ -12,13 +12,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute:'pruebas' ,
+      initialRoute:'splash_Page' ,
       routes: {
-        'pruebas'      : (_)=> SplashPage(),
+        'splash_Page'  : (_)=> SplashPage(),
         'welcome_Page' : (_)=> GokuWelcomePage(),
         'basics_design': (_)=> BasicDesignScreen(),
         'scroll_screen': (_)=> ScrollScreen(),
-        'home_screen'  : (_)=> HomeScreen()
+        'home_screen'  : (_)=> HomeScreen(),
+        'rol_choose'   : (_)=> RolCharacter(),
+        'goku_details' : (_)=> GokuPage(),
       },
     );
   } 

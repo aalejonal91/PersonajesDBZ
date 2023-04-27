@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         children: [
            Container(decoration:boxDecoration),
         const  _Boxtop  (),          
-        const  PageTitle(),
+        const  PageTitleHome(),
         const  _HomeBody(), 
           ]             
        )
@@ -72,7 +72,7 @@ class _Boxtop extends StatelessWidget {
   }
 }
 
-class _ButtomBox extends StatelessWidget {
+/* class _ButtomBox extends StatelessWidget {
   const _ButtomBox({super.key});
 
   @override
@@ -89,4 +89,4 @@ class _ButtomBox extends StatelessWidget {
       ],
     );
   }
-}
+} */

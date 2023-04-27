@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class Card_Table extends StatelessWidget {
   const Card_Table({super.key});
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return  SafeArea(
       bottom: true,
       child: Table(
-        children: [
+        children:const [
            TableRow(
             children: [
               //To do:configuar Navigator
-              GestureDetector(onTap:() {print('aca vamos bien');},child: _SingleCardCharacters(name: 'Goku',image: AssetImage('assets/goku.jpg'))),
-              GestureDetector(onTap:() {},child: _SingleCardCharacters(name: 'Vegeta',image: AssetImage('assets/vegeta1.jpg'))),
+              _SingleCardCharacters(name: 'Goku',image: AssetImage('assets/goku.jpg')),
+              _SingleCardCharacters(name: 'Vegeta',image: AssetImage('assets/vegeta1.jpg')),
             ]),
            TableRow(
             children: [
@@ -33,35 +33,38 @@ class Card_Table extends StatelessWidget {
   }
 }
 
-class _SingleCardCharacters extends StatelessWidget {
-  const _SingleCardCharacters({ super.key, required this.name, required this.image });
+class  _SingleCardCharacters extends StatelessWidget {
+  const  _SingleCardCharacters({ super.key, required this.name, required this.image });
 
   final String name;
   final AssetImage image ;
 
   @override
   Widget build(BuildContext context) {
-    return Container( 
-            margin: const EdgeInsets.symmetric(horizontal: 25,vertical: 10) ,
-            height: 140,
-            width: 80,
-            decoration: BoxDecoration(
-              borderRadius:BorderRadius.circular(30),
-              color:const Color.fromRGBO(69, 64, 41, 0.2),
-            ),
-            child:Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-              Text(name,
-                    style    : const TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.white),
-                    textAlign:TextAlign.center),
-              CircleAvatar(
-                backgroundImage: image, //AssetImage('assets/goku_sf_notr.png'),
-                radius: 40,
-                backgroundColor:Colors.transparent),
-              ],
-            ),                
-      );          
+    return GestureDetector(
+      onTap:() {print('prgk');},
+      child: Container( 
+              margin: const EdgeInsets.symmetric(horizontal: 25,vertical: 10) ,
+              height: 140,
+              width: 80,
+              decoration: BoxDecoration(
+                borderRadius:BorderRadius.circular(30),
+                color:const Color.fromRGBO(69, 64, 41, 0.2),
+              ),
+              child:Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                Text(name,
+                      style     : const TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Color.fromARGB(184, 155, 142, 86)),
+                      textAlign :TextAlign.center),
+                CircleAvatar(
+                  backgroundImage: image, //AssetImage('assets/goku_sf_notr.png'),
+                  radius: 40,
+                  backgroundColor:Colors.transparent),
+                ],
+              ),                
+        ),
+    );          
     }
 }
 
