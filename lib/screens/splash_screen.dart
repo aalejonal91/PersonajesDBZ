@@ -15,8 +15,8 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
   } 
   Future<void> pasarPage() async{
-    Future.delayed(const Duration(seconds: 15), () async{     
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+    Future.delayed(const Duration(milliseconds: 15200), () async{     
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const RolCharacter()));
     });
   } 
 

@@ -42,7 +42,7 @@ class  _SingleCardCharacters extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:() {print('prgk');},
+      onTap:() {Navigator.pushNamed(context, 'goku_details');},
       child: Container( 
               margin: const EdgeInsets.symmetric(horizontal: 25,vertical: 10) ,
               height: 140,

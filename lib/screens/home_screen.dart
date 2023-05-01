@@ -2,8 +2,8 @@ import 'package:designs_initials_flutter/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreenHeroes extends StatelessWidget {
+  const HomeScreenHeroes({super.key});
   @override
   Widget build(BuildContext context) {
     const boxDecoration = BoxDecoration(

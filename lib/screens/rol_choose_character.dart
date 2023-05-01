@@ -1,5 +1,6 @@
 import 'package:designs_initials_flutter/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:animate_do/animate_do.dart';
 
 
 class RolCharacter extends StatelessWidget {
@@ -28,8 +29,6 @@ class RolCharacter extends StatelessWidget {
     );                      
   }
 }
-
-
 
 class _BodyTeams extends StatelessWidget {
   const _BodyTeams({super.key});
@@ -86,11 +85,15 @@ class Card_Table_rol extends StatelessWidget {
             children: [
               //To do:configuar Navigator
               GestureDetector(
-                onTap:() {print('aca vamos bien');},
-                child: _SingleCardsTeams_Left(name: 'Goku',image: AssetImage('assets/goku.jpg'))),
+                onTap:() {Navigator.pushNamed(context, 'home_screen');},
+                child: FadeInLeft(
+                  duration: Duration(seconds: 2),
+                  child: const _SingleCardsTeams_Left(name: 'HEROES',))),
               GestureDetector(
-                onTap:() {print('aca tambien vamos bien');},
-                child: _SingleCardsTeams_Right(name: 'Vegeta',image: AssetImage('assets/vegeta1.jpg'))),
+                onTap:() {Navigator.pushNamed(context, 'home_screen');},
+                child: FadeInRight(
+                  duration: Duration(seconds: 2),
+                  child: const _SingleCardsTeams_Right(name: 'VILLANOS',))),
             ]
           ),
         ],
@@ -101,13 +104,14 @@ class Card_Table_rol extends StatelessWidget {
 
 
 class  _SingleCardsTeams_Left extends StatelessWidget {
-  const  _SingleCardsTeams_Left({ super.key, required this.name, required this.image });
+  const  _SingleCardsTeams_Left({ super.key, required this.name, this.image });
 
   final String name;
-  final AssetImage image ;
+  final Image? image ;
 
   @override
   Widget build(BuildContext context) {
+  
     return Row(
       children: [
         Padding(
@@ -127,18 +131,21 @@ class  _SingleCardsTeams_Left extends StatelessWidget {
             borderRadius:BorderRadius.circular(30),
             color:const Color.fromRGBO(69, 64, 41, 0.2),
             ),
-          //child: image,  
+           child: ClipRRect(
+            borderRadius:BorderRadius.circular(30),
+            child: Image.asset('assets/heroes.jpg',fit: BoxFit.fill,color: Colors.white.withOpacity(0.6),colorBlendMode: BlendMode.modulate,))  
           ),                
         ],
       );          
     }
 }
 
+
 class  _SingleCardsTeams_Right extends StatelessWidget {
-  const  _SingleCardsTeams_Right({ super.key, required this.name, required this.image });
+  const  _SingleCardsTeams_Right({ super.key, required this.name, this.image });
 
   final String name;
-  final AssetImage image ;
+  final Image? image ;
 
   @override
   Widget build(BuildContext context) {
@@ -152,18 +159,26 @@ class  _SingleCardsTeams_Right extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius:BorderRadius.circular(30),
             color:const Color.fromRGBO(69, 64, 41, 0.2),
-            )
+            ),
+          child: ClipRRect(
+            borderRadius:BorderRadius.circular(30),
+            child: Image.asset('assets/villanos_prueba.png',fit: BoxFit.fill,color: Colors.white.withOpacity(0.7),colorBlendMode: BlendMode.modulate,))  
           ),
         Padding(
           padding: const EdgeInsets.only(left: 5,right: 10),
           child: RotatedBox(
             quarterTurns: 1,
-            child: Text(name,
-                    style    : const TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.white),
-                    textDirection: TextDirection.rtl, textAlign: TextAlign.center),
-                  ),
-        ),                
-        ],
-      );          
-    }
+            child: Text(
+              name,
+              style    : const TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.white),
+              textDirection: TextDirection.rtl, textAlign: TextAlign.center),
+            ),
+          ),                
+      ],
+    );          
+  }
 }
+/* ClipRRect(
+            borderRadius:BorderRadius.circular(30), 
+            child: Image.network('https://i.pinimg.com/736x/9f/17/53/9f1753b546110984392d7e8b3b11b1d3.jpg',fit: BoxFit.fill)
+            ), */

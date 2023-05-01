@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         'welcome_Page' : (_)=> GokuWelcomePage(),
         'basics_design': (_)=> BasicDesignScreen(),
         'scroll_screen': (_)=> ScrollScreen(),
-        'home_screen'  : (_)=> HomeScreen(),
+        'home_screen'  : (_)=> HomeScreenHeroes(),
         'rol_choose'   : (_)=> RolCharacter(),
         'goku_details' : (_)=> GokuPage(),
       },
