@@ -45,8 +45,6 @@ class _BodyTeams extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(               
               children:const [
-                // PageTitle(),
-                //SizedBox(height: 35),
                 Card_Table_rol(),
                 SizedBox(height: 55),
               ]
@@ -90,7 +88,7 @@ class Card_Table_rol extends StatelessWidget {
                   duration: Duration(seconds: 2),
                   child: const _SingleCardsTeams_Left(name: 'HEROES',))),
               GestureDetector(
-                onTap:() {Navigator.pushNamed(context, 'home_screen');},
+                onTap:() {Navigator.pushNamed(context, 'home_screen_villanos');},
                 child: FadeInRight(
                   duration: Duration(seconds: 2),
                   child: const _SingleCardsTeams_Right(name: 'VILLANOS',))),
@@ -115,25 +113,25 @@ class  _SingleCardsTeams_Left extends StatelessWidget {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 5,right: 5),
+          padding: const EdgeInsets.only(left: 1,right: 5),
           child: RotatedBox(
               quarterTurns: 1,
               child: Text(name,
-                style    : const TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.white),
+                style    : const TextStyle(fontWeight:FontWeight.bold,fontSize: 29,color: Color.fromARGB(184, 68, 62, 38)),
                 textDirection: TextDirection.rtl, textAlign: TextAlign.center),
               ),
         ),
         Container(             
           margin: const EdgeInsets.symmetric(vertical: 10) ,
-          height: 400,
-          width: 120,
+          height: 450,
+          width: 130,
           decoration: BoxDecoration(
             borderRadius:BorderRadius.circular(30),
             color:const Color.fromRGBO(69, 64, 41, 0.2),
             ),
            child: ClipRRect(
             borderRadius:BorderRadius.circular(30),
-            child: Image.asset('assets/heroes.jpg',fit: BoxFit.fill,color: Colors.white.withOpacity(0.6),colorBlendMode: BlendMode.modulate,))  
+            child: Image.asset('assets/heroes.jpg',fit: BoxFit.fill,color: Colors.white.withOpacity(0.75),colorBlendMode: BlendMode.modulate,))  
           ),                
         ],
       );          
@@ -154,23 +152,23 @@ class  _SingleCardsTeams_Right extends StatelessWidget {
       children: [
         Container(             
           margin: const EdgeInsets.symmetric(vertical: 7) ,
-          height: 400,
-          width: 120,
+          height: 450,
+          width: 130,
           decoration: BoxDecoration(
             borderRadius:BorderRadius.circular(30),
             color:const Color.fromRGBO(69, 64, 41, 0.2),
             ),
           child: ClipRRect(
             borderRadius:BorderRadius.circular(30),
-            child: Image.asset('assets/villanos_prueba.png',fit: BoxFit.fill,color: Colors.white.withOpacity(0.7),colorBlendMode: BlendMode.modulate,))  
+            child: Image.asset('assets/villanos_prueba.png',fit: BoxFit.fill,color: Colors.white.withOpacity(0.8),colorBlendMode: BlendMode.modulate,))  
           ),
         Padding(
-          padding: const EdgeInsets.only(left: 5,right: 10),
+          padding: const EdgeInsets.only(left:5 ,right: 8),
           child: RotatedBox(
             quarterTurns: 1,
             child: Text(
               name,
-              style    : const TextStyle(fontWeight:FontWeight.bold,fontSize: 20,color: Colors.white),
+              style    : const TextStyle(fontWeight:FontWeight.bold,fontSize: 29,color: Color.fromARGB(184, 68, 62, 38)),
               textDirection: TextDirection.rtl, textAlign: TextAlign.center),
             ),
           ),                

@@ -14,13 +14,15 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       initialRoute:'splash_Page' ,
       routes: {
-        'splash_Page'  : (_)=> SplashPage(),
-        'welcome_Page' : (_)=> GokuWelcomePage(),
-        'basics_design': (_)=> BasicDesignScreen(),
-        'scroll_screen': (_)=> ScrollScreen(),
-        'home_screen'  : (_)=> HomeScreenHeroes(),
-        'rol_choose'   : (_)=> RolCharacter(),
-        'goku_details' : (_)=> GokuPage(),
+        'splash_Page'           : (_)=> SplashPage(),
+        'welcome_Page'          : (_)=> GokuWelcomePage(),
+        'basics_design'         : (_)=> BasicDesignScreen(),
+        'scroll_screen'         : (_)=> ScrollScreen(),
+        'home_screen'           : (_)=> HomeScreenHeroes(),
+        'home_screen_villanos'  : (_)=> HomeScreenVillanos(),
+        'rol_choose'            : (_)=> RolCharacter(),
+        'goku_details'          : (_)=> GokuPage(),
+        'GokuPage'              : (_)=> GokuPage(),
       },
     );
   } 
