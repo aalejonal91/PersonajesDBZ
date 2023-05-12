@@ -7,9 +7,9 @@ class BasicDesignScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       body: Column(       
-        children:const [ 
+        children:[ 
           Image(image: AssetImage('assets/guerreros_z.jpg')),
           TitlePage(),
           SizedBox(height: 5,),

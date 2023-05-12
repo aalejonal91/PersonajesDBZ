@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 
 class ScrollScreen extends StatelessWidget {
+  const ScrollScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +39,9 @@ class PageHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return const Stack(
       //mainAxisAlignment: MainAxisAlignment.center,
-      children:const [  
+      children:[  
         //Background Image        
          BackgroundScroll(),
         //MainContent

@@ -28,10 +28,8 @@ class HomeScreenHeroes extends StatelessWidget {
   }
 }
 
-
-
 class _HomeBody extends StatelessWidget {
-  const _HomeBody({super.key});
+  const _HomeBody();
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +37,12 @@ class _HomeBody extends StatelessWidget {
       padding: const EdgeInsets.only(top: 190),
       child: SafeArea(
         child: AnimatedContainer(
-          duration:Duration(seconds:8),
+          duration:const Duration(seconds:8),
           curve:Curves.easeInOutQuint ,
-          margin: EdgeInsets.only(top: 5) ,
-          child: SingleChildScrollView(
+          margin: const EdgeInsets.only(top: 5) ,
+          child: const SingleChildScrollView(
             child: Column(               
-              children:const [
+              children:[
                 // PageTitle(),
                 SizedBox(height: 35),
                 Card_Table(),
@@ -60,33 +58,14 @@ class _HomeBody extends StatelessWidget {
 
 
 class _Boxtop extends StatelessWidget {
-  const _Boxtop({super.key});
+  const _Boxtop();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const SizedBox(
       width: double.infinity,
       height:150,
-      child: const Image( image: AssetImage('assets/shenglong_sin_fondo.png'),fit: BoxFit.cover,),                    
+      child: Image( image: AssetImage('assets/shenglong_sin_fondo.png'),fit: BoxFit.cover,),                    
     );
   }
 }
-
-/* class _ButtomBox extends StatelessWidget {
-  const _ButtomBox({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children:const [
-         SizedBox(
-          width: double.infinity,
-          height:100,
-          child:Image(image: AssetImage('assets/esferas_del_dragonsinfondo.png'),
-          fit: BoxFit.cover,)                     
-        ),
-      ],
-    );
-  }
-} */

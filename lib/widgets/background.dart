@@ -25,12 +25,12 @@ class Background extends StatelessWidget {
 }
 
 class _StacksWelcomePage extends StatelessWidget {
-  const _StacksWelcomePage({ super.key });
+  const _StacksWelcomePage();
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children:const [
+    return const Stack(
+      children:[
         //Esfera Superior
          Positioned (left  : -50 ,top: -50,child: TopBox   ()),
         //Goku 

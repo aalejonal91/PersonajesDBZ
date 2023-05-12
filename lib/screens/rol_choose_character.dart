@@ -31,7 +31,7 @@ class RolCharacter extends StatelessWidget {
 }
 
 class _BodyTeams extends StatelessWidget {
-  const _BodyTeams({super.key});
+  const _BodyTeams();
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +39,12 @@ class _BodyTeams extends StatelessWidget {
       padding: const EdgeInsets.only(top: 190),
       child: SafeArea(
         child: AnimatedContainer(
-          duration:Duration(seconds:8),
+          duration:const Duration(seconds:8),
           curve:Curves.easeInOutQuint ,
-          margin: EdgeInsets.only(top: 5) ,
-          child: SingleChildScrollView(
+          margin: const EdgeInsets.only(top: 5) ,
+          child: const SingleChildScrollView(
             child: Column(               
-              children:const [
+              children:[
                 Card_Table_rol(),
                 SizedBox(height: 55),
               ]
@@ -58,14 +58,14 @@ class _BodyTeams extends StatelessWidget {
 
 
 class _Boxtop extends StatelessWidget {
-  const _Boxtop({super.key});
+  const _Boxtop();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const SizedBox(
       width: double.infinity,
       height:double.infinity,
-      child: const Image( image: AssetImage('assets/templo_kaio.jpg'),fit: BoxFit.cover,),                    
+      child: Image( image: AssetImage('assets/templo_kaio.jpg'),fit: BoxFit.cover,),                    
     );
   }
 }
@@ -85,12 +85,12 @@ class Card_Table_rol extends StatelessWidget {
               GestureDetector(
                 onTap:() {Navigator.pushNamed(context, 'home_screen');},
                 child: FadeInLeft(
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: const _SingleCardsTeams_Left(name: 'HEROES',))),
               GestureDetector(
                 onTap:() {Navigator.pushNamed(context, 'home_screen_villanos');},
                 child: FadeInRight(
-                  duration: Duration(seconds: 2),
+                  duration: const Duration(seconds: 2),
                   child: const _SingleCardsTeams_Right(name: 'VILLANOS',))),
             ]
           ),
@@ -102,7 +102,7 @@ class Card_Table_rol extends StatelessWidget {
 
 
 class  _SingleCardsTeams_Left extends StatelessWidget {
-  const  _SingleCardsTeams_Left({ super.key, required this.name, this.image });
+  const  _SingleCardsTeams_Left({ required this.name, this.image });
 
   final String name;
   final Image? image ;
@@ -140,7 +140,7 @@ class  _SingleCardsTeams_Left extends StatelessWidget {
 
 
 class  _SingleCardsTeams_Right extends StatelessWidget {
-  const  _SingleCardsTeams_Right({ super.key, required this.name, this.image });
+  const  _SingleCardsTeams_Right({ required this.name, this.image });
 
   final String name;
   final Image? image ;

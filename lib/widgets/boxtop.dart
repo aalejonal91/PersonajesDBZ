@@ -6,10 +6,10 @@ class Boxtop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const SizedBox(
       width: double.infinity,
       height:double.infinity,
-      child: const Image( image: AssetImage('assets/templo_kaio.jpg'),fit: BoxFit.cover,),                    
+      child: Image( image: AssetImage('assets/templo_kaio.jpg'),fit: BoxFit.cover,),                    
     );
   }
 }
@@ -19,10 +19,10 @@ class Boxtop_characters extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const SizedBox(
       width: double.infinity,
       height:double.infinity,
-      child: const Image( image: AssetImage('assets/kamehouse.jpg'),fit: BoxFit.cover,),                    
+      child: Image( image: AssetImage('assets/kamehouse.jpg'),fit: BoxFit.cover,),                    
     );
   }
 }

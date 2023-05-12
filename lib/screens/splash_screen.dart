@@ -8,6 +8,7 @@ class SplashPage extends StatefulWidget {
 }
 class _SplashPageState extends State<SplashPage> {
   bool op=true;
+  @override
   void initState(){
     pasarPage();
     animatedopacity() ;
@@ -33,14 +34,14 @@ class _SplashPageState extends State<SplashPage> {
         
             children:[ 
               Container(
-               margin: EdgeInsets.only(top:50), 
-               child: Image.asset("assets/dragon-balls.gif",height: double.maxFinite,),
-               color: Colors.black,),
+               margin: const EdgeInsets.only(top:50),
+               color: Colors.black, 
+               child: Image.asset("assets/dragon-balls.gif",height: double.maxFinite,),),
                AnimatedOpacity(
-                opacity: op ? 0 : 1, duration:  Duration(seconds: 10),
+                opacity: op ? 0 : 1, duration:  const Duration(seconds: 10),
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.only(top:290),
+                    padding: const EdgeInsets.only(top:290),
                     child: Image.asset("assets/letras (2).png",),
                   ))
                 )

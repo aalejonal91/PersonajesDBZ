@@ -9,25 +9,26 @@ class Card_Table extends StatelessWidget {
     return  SafeArea(
       bottom: false,
       child: FadeInDown(
-        duration: Duration(milliseconds: 1200),
+        duration: const Duration(milliseconds: 1200),
         child: Table(
           children:const [
              TableRow(
               children: [
                 //To do:configuar Navigator
-                _SingleCardCharacters(name: 'Goku',image: AssetImage('assets/goku.jpg')),
-                _SingleCardCharacters(name: 'Vegeta',image: AssetImage('assets/vegeta1.jpg')),
-              ]),
+                _SingleCardCharacters(name: 'Goku',image: AssetImage('assets/goku.jpg'),routePage:'GokuPage'),
+                _SingleCardCharacters(name: 'Vegeta',image: AssetImage('assets/vegeta1.jpg'),routePage:'VegetaPage'),
+                ]
+              ),
              TableRow(
               children: [
-                _SingleCardCharacters(name: 'Goten',image: AssetImage('assets/goten.jpg')),
-                _SingleCardCharacters(name: 'Trunks',image: AssetImage('assets/trunks_kid.jpg')),
+                _SingleCardCharacters(name: 'Goten',image: AssetImage('assets/goten.jpg'),routePage:'GotenPage'),
+                _SingleCardCharacters(name: 'Trunks',image: AssetImage('assets/trunks_kid.jpg'),routePage:'TrunksPage'),
               ]
             ),
              TableRow(
               children: [
-                _SingleCardCharacters(name: 'Gohan',image: AssetImage('assets/gohan.jpg')),
-                _SingleCardCharacters(name: 'Piccolo',image: AssetImage('assets/piccolo.jpg')),
+                _SingleCardCharacters(name: 'Gohan',image: AssetImage('assets/gohan.jpg'),routePage:'GohanPage'),
+                _SingleCardCharacters(name: 'Piccolo',image: AssetImage('assets/piccolo.jpg'),routePage:'PiccoloPage'),
               ]
             ),
                ],
@@ -38,15 +39,16 @@ class Card_Table extends StatelessWidget {
 }
 
 class  _SingleCardCharacters extends StatelessWidget {
-  const  _SingleCardCharacters({ super.key, required this.name, required this.image });
+  const  _SingleCardCharacters({ required this.name, required this.image, required this.routePage });
 
   final String name;
   final AssetImage image ;
+  final String routePage;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:() {Navigator.pushNamed(context, 'goku_details');},
+      onTap:() {Navigator.pushNamed(context, routePage);},
       child: Container( 
               margin: const EdgeInsets.symmetric(horizontal: 25,vertical: 10) ,
               height: 170,
@@ -80,25 +82,25 @@ class Card_Table_Villanos extends StatelessWidget {
     return  SafeArea(
       bottom: false,
       child: FadeInDown(
-        duration: Duration(milliseconds: 1200),
+        duration: const Duration(milliseconds: 1200),
         child: Table(
           children:const [
              TableRow(
               children: [
                 //To do:configuar Navigator
-                _SingleCardCharactersVillanos(name: 'Freezer',image: AssetImage('assets/frezzer_avatar.jpg')),
-                _SingleCardCharactersVillanos(name: 'Cell',image: AssetImage('assets/cell_avatar.jpg')),
+                _SingleCardCharactersVillanos(name: 'Freezer',image: AssetImage('assets/frezzer_avatar.jpg'),routePage:'FreezerPage'),
+                _SingleCardCharactersVillanos(name: 'Cell',image: AssetImage('assets/cell_avatar.jpg'),routePage:'CellPage'),
               ]),
              TableRow(
               children: [
-                _SingleCardCharactersVillanos(name: 'Majin-bu',image: AssetImage('assets/buu_avatar.jpg')),
-                _SingleCardCharactersVillanos(name: 'Babidee',image: AssetImage('assets/babidee.jpg')),
+                _SingleCardCharactersVillanos(name: 'Majin-boo',image: AssetImage('assets/buu_avatar.jpg'),routePage:'MajinBooPage'),
+                _SingleCardCharactersVillanos(name:  'Babidi',image: AssetImage('assets/babidee.jpg'),routePage:'BabidiPage'),
               ]
             ),
              TableRow(
               children: [
-                _SingleCardCharactersVillanos(name: 'Dabura',image: AssetImage('assets/daburajpg.jpg',)),
-                _SingleCardCharactersVillanos(name: 'Broly',image: AssetImage('assets/broly_avatar.jpg')),
+                _SingleCardCharactersVillanos(name: 'Dabura',image: AssetImage('assets/daburajpg.jpg',),routePage:'DaburaPage'),
+                _SingleCardCharactersVillanos(name: 'Broly',image: AssetImage('assets/broly_avatar.jpg'),routePage:'BrolyPage'),
               ]
             ),
           ],
@@ -109,15 +111,16 @@ class Card_Table_Villanos extends StatelessWidget {
 }
 
 class  _SingleCardCharactersVillanos extends StatelessWidget {
-  const  _SingleCardCharactersVillanos({ super.key, required this.name, required this.image });
+  const  _SingleCardCharactersVillanos({ required this.name, required this.image, required this.routePage });
 
   final String name;
   final AssetImage image ;
+  final String routePage;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:() {Navigator.pushNamed(context, 'goku_details');},
+      onTap:() {Navigator.pushNamed(context, routePage);},
       child: Container( 
               margin: const EdgeInsets.symmetric(horizontal: 25,vertical: 10) ,
               height: 170,

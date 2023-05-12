@@ -1,9 +1,18 @@
-export 'package:designs_initials_flutter/screens/basics_designs.dart';
-export 'package:designs_initials_flutter/screens/scroll_design.dart';
-export 'package:designs_initials_flutter/screens/goku_welcome.dart';
-export 'package:designs_initials_flutter/screens/home_screen_heroes.dart';
-export 'package:designs_initials_flutter/screens/rol_choose_character.dart';
-export 'package:designs_initials_flutter/screens/splash_screen.dart';
-export 'package:designs_initials_flutter/screens/character_pages/goku_page.dart';
-export 'package:designs_initials_flutter/screens/home_screen_villanos.dart';
-
+export 'package:designs_initials_flutter/screens/basics_designs.dart'                 ;
+export 'package:designs_initials_flutter/screens/scroll_design.dart'                  ;
+export 'package:designs_initials_flutter/screens/home_screen_heroes.dart'             ;
+export 'package:designs_initials_flutter/screens/rol_choose_character.dart'           ;
+export 'package:designs_initials_flutter/screens/splash_screen.dart'                  ;
+export 'package:designs_initials_flutter/screens/character_pages/goku_page.dart'      ;
+export 'package:designs_initials_flutter/screens/home_screen_villanos.dart'           ;
+export 'package:designs_initials_flutter/screens/character_pages/vegeta_page.dart'    ;
+export 'package:designs_initials_flutter/screens/character_pages/goten.dart'          ;
+export 'package:designs_initials_flutter/screens/character_pages/trunks_page.dart'    ;
+export 'package:designs_initials_flutter/screens/character_pages/gohan_page.dart'     ;
+export 'package:designs_initials_flutter/screens/character_pages/piccolo_page.dart'   ;
+export 'package:designs_initials_flutter/screens/character_pages/freezer_page.dart'   ;
+export 'package:designs_initials_flutter/screens/character_pages/majin_boo_page.dart' ;
+export 'package:designs_initials_flutter/screens/character_pages/babidi_page.dart'    ;
+export 'package:designs_initials_flutter/screens/character_pages/dabura_page.dart'    ;
+export 'package:designs_initials_flutter/screens/character_pages/broly_page.dart'     ;
+export 'package:designs_initials_flutter/screens/character_pages/cell_page.dart'      ;
